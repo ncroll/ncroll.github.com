@@ -5,7 +5,7 @@
 
       var scene = new THREE.Scene();
 
-      var sphere = new THREE.SphereGeometry(50, 8, 6, 0);
+      var sphere = new THREE.SphereGeometry(180, 8, 6, 0);
       var material = new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true });
       var mesh = new THREE.Mesh(sphere, material);
       scene.add(mesh);
