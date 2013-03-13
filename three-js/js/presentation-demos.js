@@ -2,7 +2,6 @@
    PresentationDemo.Init = function() {
       var camera = new THREE.PerspectiveCamera(75, 600 / 400, 1, 10000);
       camera.position.z = 1000;
-
       var scene = new THREE.Scene();
 
       var sphere = new THREE.SphereGeometry(180, 8, 6, 0);
@@ -12,9 +11,7 @@
 
       var renderer = new THREE.WebGLRenderer();
       renderer.setSize(600, 400);
-
       document.getElementById('demo1').appendChild(renderer.domElement);
-
       renderer.render(scene, camera);
    }
 })(window.PresentationDemo = window.PresentationDemo || {})
