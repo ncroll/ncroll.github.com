@@ -49,29 +49,23 @@
 	    </section>
 	    <section>
 	       <h3>Setup Camera & Scene</h3>
-	       <pre>
-	          <code>var camera = new THREE.PerspectiveCamera(75, 600 / 400, 1, 10000);
+	       <pre><code>var camera = new THREE.PerspectiveCamera(75, 600 / 400, 1, 10000);
 camera.position.z = 1000;
-var scene = new THREE.Scene();</code>
-	       </pre>
+var scene = new THREE.Scene();</code></pre>
 	    </section>
 	    <section>
 	       <h3>Create the Mesh</h3>
-	       <pre>
-	          <code>var sphere = new THREE.SphereGeometry(180, 8, 6, 0);
+	       <pre><code>var sphere = new THREE.SphereGeometry(180, 8, 6, 0);
 var material = new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true });
 var mesh = new THREE.Mesh(sphere, material);
-scene.add(mesh);</code>
-	       </pre>
+scene.add(mesh);</code></pre>
 	    </section>
 	    <section>
 	       <h3>Render the Scene</h3>
-	       <pre>
-	          <code>var renderer = new THREE.WebGLRenderer();
+	       <pre><code>var renderer = new THREE.WebGLRenderer();
 renderer.setSize(600, 400);
 document.getElementById('demo1').appendChild(renderer.domElement);
-renderer.render(scene, camera);</code>
-	       </pre>
+renderer.render(scene, camera);</code></pre>
 	    </section>
 	 </section>
 	 <section>Would you like to know more?</section>
