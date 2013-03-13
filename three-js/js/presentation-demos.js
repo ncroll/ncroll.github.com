@@ -1,6 +1,6 @@
 (function(PresentationDemo) {
    PresentationDemo.Init = function() {
-      var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
+      var camera = new THREE.PerspectiveCamera(75, 600 / 400, 1, 10000);
       camera.position.z = 1000;
 
       var scene = new THREE.Scene();
