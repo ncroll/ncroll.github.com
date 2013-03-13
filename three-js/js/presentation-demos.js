@@ -14,5 +14,7 @@
       renderer.setSize(600, 400);
 
       document.getElementById('demo1').appendChild(renderer.domElement);
+
+      renderer.render(scene, camera);
    }
 })(window.PresentationDemo = window.PresentationDemo || {})
