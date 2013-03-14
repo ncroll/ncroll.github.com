@@ -100,17 +100,23 @@ renderer.render(scene, camera);
 document.getElementById('demo1').appendChild(renderer.domElement);</code></pre>
 	 </section>
 	 <section>
-	    <section>Put some meat on them bones</section>
 	    <section>
-	       <h3>Phong Material</h3>
+	       <h3>A little meat on them bones</h3>
 	       <div id="demo2"></div>
 	    </section>
             <section>
+	       <h3>Reflective Material</h3>
 	       <pre><code>var material = new THREE.MeshPhongMaterial({
    emissive: 0xff2400,
    specular: 0xfc2847,
    shininess: 40
 });</code></pre>
+            </section>
+	    <section>
+	       <h3>Aziz, Light!</h3>
+	       <pre><code>var light = new THREE.DirectionalLight(0xffffff, 0.5);
+light.position.set(0, 1, 1);
+scene.add(light);</code></pre>
             </section>
 	 </section>
 	 <section>Would you like to know more?</section>
