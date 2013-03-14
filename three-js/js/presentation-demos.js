@@ -27,7 +27,7 @@
       var material = new THREE.MeshPhongMaterial({ 
 	      color: 0xff2400,
 	      specular: 0xfc2847,
-	      shininess: 40
+	      shininess: 32
       });
       var mesh = new THREE.Mesh(sphere, material);
 
