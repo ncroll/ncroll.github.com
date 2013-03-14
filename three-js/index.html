@@ -52,12 +52,12 @@
 	       <pre><code>var camera = new THREE.PerspectiveCamera(75, 600 / 400, 1, 10000);
 camera.position.z = 1000;
  
-var sphere = new THREE.SphereGeometry(180, 8, 6, 0);
+var geometry = new THREE.SphereGeometry(180, 8, 6, 0);
 var material = new THREE.MeshBasicMaterial({
    wireframe: true,
    color: 0xff2400
 });
-var mesh = new THREE.Mesh(sphere, material);
+var mesh = new THREE.Mesh(geometry, material);
  
 var scene = new THREE.Scene();
 scene.add(mesh);
@@ -83,12 +83,12 @@ camera.position.z = 1000;</code></pre>
 	 <section>
 	    <section>
 	       <h3>Create the Mesh & Scene</h3>
-	       <pre><code>var sphere = new THREE.SphereGeometry(180, 8, 6, 0);
+	       <pre><code>var geometry = new THREE.SphereGeometry(180, 8, 6, 0);
 var material = new THREE.MeshBasicMaterial({ 
    wireframe: true,
    color: 0xff2400
 });
-var mesh = new THREE.Mesh(sphere, material);
+var mesh = new THREE.Mesh(geometry, material);
 
 var scene = new THREE.Scene();
 scene.add(mesh);</code></pre>
@@ -120,6 +120,10 @@ document.getElementById('demo1').appendChild(renderer.domElement);</code></pre>
 light.position.set(0, 1, 1);
 scene.add(light);</code></pre>
             </section>
+	 </section>
+	 <section>
+	    <h3>Action!</h3>
+	    <div id="demo3"></div>
 	 </section>
 	 <section>Would you like to know more?</section>
       </div>
