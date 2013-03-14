@@ -4,7 +4,10 @@
       camera.position.z = 1000;
 
       var sphere = new THREE.SphereGeometry(180, 8, 6, 0);
-      var material = new THREE.MeshBasicMaterial({ wireframe: true });
+      var material = new THREE.MeshBasicMaterial({ 
+	      wireframe: true,
+	      color: 0xff2400
+      });
       var mesh = new THREE.Mesh(sphere, material);
 
       var scene = new THREE.Scene();
