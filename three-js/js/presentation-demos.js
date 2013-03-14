@@ -34,6 +34,10 @@
       var scene = new THREE.Scene();
       scene.add(mesh);
 
+      var light = new THREE.DirectionalLight(0xffffff, 0.5);
+      light.position.set(0, 1, 1);
+      scene.add(light);
+
       var renderer = new THREE.WebGLRenderer();
       renderer.setSize(600, 400);
       renderer.render(scene, camera);
