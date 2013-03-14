@@ -25,9 +25,9 @@
 
       var sphere = new THREE.SphereGeometry(180, 8, 6, 0);
       var material = new THREE.MeshPhongMaterial({ 
-	      color: 0xff2400,
+	      emissive: 0xff2400,
 	      specular: 0xfc2847,
-	      shininess: 32
+	      shininess: 40
       });
       var mesh = new THREE.Mesh(sphere, material);
 
