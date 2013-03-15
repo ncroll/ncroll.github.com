@@ -87,7 +87,7 @@
 	       <pre><code>var camera = new THREE.PerspectiveCamera(75, 600 / 400, 1, 10000);
 camera.position.z = 1000;
  
-var geometry = new THREE.SphereGeometry(180, 8, 6, 0);
+var geometry = new THREE.SphereGeometry(180);
 var material = new THREE.MeshBasicMaterial({
    wireframe: true,
    color: 0xff2400
@@ -107,7 +107,12 @@ document.getElementById('demo1').appendChild(renderer.domElement);</code></pre>
 	    <section>
 	       <h3>Setup Camera</h3>
 	       <pre><code>var camera = new THREE.PerspectiveCamera(75, 600 / 400, 1, 10000);
-camera.position.z = 1000;</code></pre>
+//        75 = frustrum vertical field of view (degrees)
+// 600 / 400 = aspect ratio (3:2)
+//         1 = frustrum near plane
+//      1000 = frustrum far plane
+camera.position.z = 1000;
+// camera positioned @ (0,0,1000), facing (0,0,0)</code></pre>
 	    </section>
 	    <section>
 	       <h3>Camera Frustrum</h3>
@@ -118,7 +123,8 @@ camera.position.z = 1000;</code></pre>
 	 <section>
 	    <section>
 	       <h3>Create the Mesh & Scene</h3>
-	       <pre><code>var geometry = new THREE.SphereGeometry(180, 8, 6, 0);
+	       <pre><code>var geometry = new THREE.SphereGeometry(180;
+// 180 = sphere radius
 var material = new THREE.MeshBasicMaterial({ 
    wireframe: true,
    color: 0xff2400
@@ -126,12 +132,14 @@ var material = new THREE.MeshBasicMaterial({
 var mesh = new THREE.Mesh(geometry, material);
 
 var scene = new THREE.Scene();
-scene.add(mesh);</code></pre>
+scene.add(mesh);
+// mesh added @ (0,0,0) be default</code></pre>
 	    </section>
          </section>
 	 <section>
 	    <h3>Render the Scene</h3>
 	    <pre><code>var renderer = new THREE.WebGLRenderer();
+// note: you can use different renderers based on browser need
 renderer.setSize(600, 400);
 renderer.render(scene, camera);
 document.getElementById('demo1').appendChild(renderer.domElement);</code></pre>
@@ -147,12 +155,18 @@ document.getElementById('demo1').appendChild(renderer.domElement);</code></pre>
    emissive: 0xff2400,
    specular: 0xfc2847,
    shininess: 40
-});</code></pre>
+});
+//  emissive = default color of material w/o lighting
+//  specular = shine color
+// shininess = specular highlight intensity</code></pre>
             </section>
 	    <section>
 	       <h3>Aziz, Light!</h3>
 	       <pre><code>var light = new THREE.DirectionalLight(0xffffff, 0.5);
+// 0xffffff = light color
+//      0.5 = light intensity
 light.position.set(0, 1, 1);
+// light positioned @ (0,1,1) pointed @ (0,0,0)
 scene.add(light);</code></pre>
             </section>
 	 </section>
@@ -199,6 +213,7 @@ render();</code></pre>
 	    <h3>Gotchas</h3>
 	    <ul>
 	       <li>Updates and Deprecates Often</li>
+	       <li>Many Demos and Tutorials are Broken</li>
 	       <li>No CDN Hosting</li>
 	    </ul>
 	    <pre><code class="bash">curl -O http://mrdoob.github.com/three.js/build/three.min.js</code></pre>
@@ -210,6 +225,7 @@ render();</code></pre>
 	          <li><a href="http://mrdoob.github.com/three.js/docs/">http://mrdoob.github.com/three.js/docs/</a></li>
 		  <li><a href="https://github.com/mrdoob/three.js/wiki/Migration/">https://github.com/mrdoob/three.js/wiki/Migration/</a></li>
 		  <li><a href="http://stemkoski.github.com/Three.js/">http://stemkoski.github.com/Three.js/</a></li>
+		  <li><a href="https://github.com/ncroll/ncroll.github.com/blob/master/three-js/js/presentation-demos.js">https://github.com/ncroll/ncroll.github.com/blob/master/three-js/js/presentation-demos.js</a></li>
 		  <li><a href="http://paulirish.com/2011/requestanimationframe-for-smart-animating/">http://paulirish.com/2011/requestanimationframe-for-smart-animating/</a></li>
 	       </ul>
 	    </section>

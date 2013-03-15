@@ -4,7 +4,7 @@
       var camera = new THREE.PerspectiveCamera(75, 600 / 400, 1, 10000);
       camera.position.z = 1000;
 
-      var geometry = new THREE.SphereGeometry(180, 8, 6, 0);
+      var geometry = new THREE.SphereGeometry(180);
       var material = new THREE.MeshBasicMaterial({ 
 	      wireframe: true,
 	      color: 0xff2400
@@ -24,7 +24,7 @@
       var camera = new THREE.PerspectiveCamera(75, 600 / 400, 1, 10000);
       camera.position.z = 1000;
 
-      var geometry = new THREE.SphereGeometry(180, 8, 6, 0);
+      var geometry = new THREE.SphereGeometry(180);
       var material = new THREE.MeshPhongMaterial({ 
 	      emissive: 0xff2400,
 	      specular: 0xfc2847,
