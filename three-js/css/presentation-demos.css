@@ -1,0 +1,24 @@
+img.chrome,img.firefox,img.opera,img.safari,img.ie {
+   width:256px;
+   height:256px;
+}
+
+img.chrome {
+   background:url(chrome_firefox_opera_safari_ie-512.png) 0 0;
+}
+
+img.firefox {
+   background:url(chrome_firefox_opera_safari_ie-512.png) 512 0;
+}
+
+img.opera {
+   background:url(chrome_firefox_opera_safari_ie-512.png) 1024 0;
+}
+
+img.safari {
+   background:url(chrome_firefox_opera_safari_ie-512.png) 1536 0;
+}
+
+img.ie {
+   background:url(chrome_firefox_opera_safari_ie-512.png) 2048 0;
+}
