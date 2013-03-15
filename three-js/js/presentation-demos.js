@@ -66,7 +66,7 @@
 
       var renderer = new THREE.WebGLRenderer();
       renderer.setSize(600, 400);
-      renderer.render(scene3, camera3);
+      renderer.render(scene, camera);
       document.getElementById('demo3').appendChild(renderer.domElement);
 
       function render() {
