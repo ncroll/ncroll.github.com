@@ -1,24 +1,24 @@
-img.chrome,img.firefox,img.opera,img.safari,img.ie {
+img.logo_chrome,img.logo_firefox,img.logo_opera,img.logo_safari,img.logo_ie {
    width:256px;
    height:256px;
 }
 
-img.chrome {
+img.logo_chrome {
    background:url(chrome_firefox_opera_safari_ie-512.png) 0 0;
 }
 
-img.firefox {
+img.logo_firefox {
    background:url(chrome_firefox_opera_safari_ie-512.png) 512 0;
 }
 
-img.opera {
+img.logo_opera {
    background:url(chrome_firefox_opera_safari_ie-512.png) 1024 0;
 }
 
-img.safari {
+img.logo_safari {
    background:url(chrome_firefox_opera_safari_ie-512.png) 1536 0;
 }
 
-img.ie {
+img.logo_ie {
    background:url(chrome_firefox_opera_safari_ie-512.png) 2048 0;
 }
