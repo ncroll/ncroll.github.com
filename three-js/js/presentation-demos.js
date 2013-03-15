@@ -1,6 +1,6 @@
 (function(PresentationDemo) {
 
-   PresentationDemo.Init1 = function() { 
+   function init1() { 
       var camera = new THREE.PerspectiveCamera(75, 600 / 400, 1, 10000);
       camera.position.z = 1000;
 
@@ -20,7 +20,7 @@
       document.getElementById('demo1').appendChild(renderer.domElement);
    }
    
-   PresentationDemo.Init2 = function() { 
+   function init2 () { 
       var camera = new THREE.PerspectiveCamera(75, 600 / 400, 1, 10000);
       camera.position.z = 1000;
 
@@ -45,7 +45,7 @@
       document.getElementById('demo2').appendChild(renderer.domElement);
    }
 
-   PresentationDemo.Init3 = function() { 
+   function init3() { 
       var camera = new THREE.PerspectiveCamera(75, 600 / 400, 1, 10000);
       camera.position.z = 1000;
 
@@ -69,6 +69,8 @@
       renderer.render(scene, camera);
       document.getElementById('demo3').appendChild(renderer.domElement);
 
+      var controls = new THREE.TrackballControls(camera);
+
       function render() {
          requestAnimationFrame(render);
 
@@ -77,13 +79,15 @@
 	 mesh.rotation.z += 0.01;
 
          renderer.render(scene, camera);
+
+	 controls.update();
       }
       render();
    }
 
    PresentationDemo.Init = function() {
-      PresentationDemo.Init1();   
-      PresentationDemo.Init2();
-      PresentationDemo.Init3();
+      init1();   
+      init2();
+      init3();
    }
 })(window.PresentationDemo = window.PresentationDemo || {})
