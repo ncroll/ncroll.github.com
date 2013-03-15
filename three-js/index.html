@@ -122,8 +122,43 @@ scene.add(light);</code></pre>
             </section>
 	 </section>
 	 <section>
-	    <h3>Action!</h3>
-	    <div id="demo3"></div>
+	    <section>
+	       <h3>Action!</h3>
+	       <div id="demo3"></div>
+	    </section>
+	    <section>
+	       <h3>Torus Knot</h3>
+	       <pre><code>var geometry = new THREE.TorusKnotGeometry(180, 40, 8);
+// 180 = radius of the entire knot
+// 40 = tube thickness
+// 8 = number of tube segments</code></pre>
+	    </section>
+	    <section>
+	       <h3>How it moves</h3>
+	       <pre><code>var controls = new THREE.TrackballControls(camera);
+		
+function render() {
+   requestAnimationFrame(render);
+
+   mesh.rotation.x += 0.01;
+   mesh.rotation.y += 0.01;
+   mesh.rotation.z += 0.01;
+
+   renderer.render(scene, camera);
+
+   controls.update();
+}
+render();</code></pre>
+            </section>
+	    <section>
+	       <p>requestionAnimationFrame() &gt; setTimeout()<p>
+	       <ul>
+	          <li>Implemented by most browsers (with vendor prefixes)</li>
+		  <li>Automatic 60fps refresh rate</li>
+		  <li>Smart rendering - won't refresh when tab is in background or minimized</li>
+		  <li>Handy polyfill with setTimeout fallback included in Three.js</li>
+	       </ul>
+	    </section>
 	 </section>
 	 <section>Would you like to know more?</section>
       </div>

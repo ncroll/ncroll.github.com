@@ -49,7 +49,7 @@
       var camera = new THREE.PerspectiveCamera(75, 600 / 400, 1, 10000);
       camera.position.z = 1000;
 
-      var geometry = new THREE.TorusKnotGeometry(180, 40, 8, 45);
+      var geometry = new THREE.TorusKnotGeometry(180, 40, 8);
       var material = new THREE.MeshPhongMaterial({ 
 	      emissive: 0xff2400,
 	      specular: 0xfc2847,
