@@ -1,4 +1,5 @@
 (function(PresentationDemo) {
+
    PresentationDemo.Init1 = function() { 
       var camera = new THREE.PerspectiveCamera(75, 600 / 400, 1, 10000);
       camera.position.z = 1000;
@@ -56,7 +57,7 @@
       });
       var mesh = new THREE.Mesh(geometry, material);
 
-      var scene = new THREE.Scene();
+      scene = new THREE.Scene();
       scene.add(mesh);
 
       var light = new THREE.DirectionalLight(0xffffff, 0.5);
@@ -65,8 +66,18 @@
 
       var renderer = new THREE.WebGLRenderer();
       renderer.setSize(600, 400);
-      renderer.render(scene, camera);
+      renderer.render(scene3, camera3);
       document.getElementById('demo3').appendChild(renderer.domElement);
+
+      function render() {
+         requestAnimationFrame(render);
+
+         geometry.rotation.x += 0.1;
+	 geometry.rotation.y += 0.1;
+
+         renderer.render(scene, camera);
+      }
+      render();
    }
 
    PresentationDemo.Init = function() {
