@@ -57,7 +57,7 @@
       });
       var mesh = new THREE.Mesh(geometry, material);
 
-      scene = new THREE.Scene();
+      var scene = new THREE.Scene();
       scene.add(mesh);
 
       var light = new THREE.DirectionalLight(0xffffff, 0.5);
@@ -85,9 +85,38 @@
       render();
    }
 
+   function init4() { 
+      var camera = new THREE.PerspectiveCamera(75, 600 / 400, 1, 10000);
+      camera.position.z = 1000;
+
+      var scene = new THREE.Scene();
+
+      var loader = new THREE.ColladaLoader();
+      loader.load('/content/model.dae', function(result) {
+         scene.add(result.scene);
+      });
+
+      var renderer = new THREE.WebGLRenderer();
+      renderer.setSize(600, 400);
+      renderer.render(scene, camera);
+      document.getElementById('demo4').appendChild(renderer.domElement);
+
+      var controls = new THREE.TrackballControls(camera);
+
+      function render() {
+         requestAnimationFrame(render);
+
+         renderer.render(scene, camera);
+
+	 controls.update();
+      }
+      render();
+   }
+
    PresentationDemo.Init = function() {
       init1();   
       init2();
       init3();
+      init4();
    }
 })(window.PresentationDemo = window.PresentationDemo || {})
