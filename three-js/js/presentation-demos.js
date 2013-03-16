@@ -92,7 +92,7 @@
       var scene = new THREE.Scene();
 
       var loader = new THREE.ColladaLoader();
-      loader.load('/content/model.dae', function(result) {
+      loader.load('/three-js/content/model.dae', function(result) {
          scene.add(result.scene);
       });
 
