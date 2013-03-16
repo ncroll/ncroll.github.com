@@ -87,12 +87,13 @@
 
    function init4() { 
       var camera = new THREE.PerspectiveCamera(75, 600 / 400, 1, 10000);
-      camera.position.z = 10;
+      camera.position.z = 20;
+      camera.position.y = 20;
 
       var scene = new THREE.Scene();
 
       var loader = new THREE.ColladaLoader();
-      loader.load('/three-js/content/model.dae', function(result) {
+      loader.load('/three-js/models/model.dae', function(result) {
          scene.add(result.scene);
       });
 
